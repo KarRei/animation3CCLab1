@@ -18,20 +18,20 @@ void ofApp::update(){
     xpos = xpos + xsteps;
     ypos = ypos + ysteps;
     
-    if (xpos > ofGetWidth()){
-        xpos = ofGetWidth();
+    if (xpos > ofGetWidth()-50){
+        xpos = ofGetWidth()-50;
         xsteps = -xsteps;
         
-    } else if (xpos < 0){
-        xpos = 0;
+    } else if (xpos < 50){
+        xpos = 50;
         xsteps = -xsteps;
         
-    } else if (ypos > ofGetHeight()){
-        ypos = ofGetHeight();
+    } else if (ypos > ofGetHeight()-50){
+        ypos = ofGetHeight()-50;
         ysteps = -ysteps;
         
-    } else if (ypos < 0){
-        ypos = 0;
+    } else if (ypos < 50){
+        ypos = 50;
         ysteps = -ysteps;
         
     }
