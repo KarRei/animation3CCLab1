@@ -8,6 +8,7 @@ void ofApp::setup(){
     xsteps = 5;
     ypos = 100;  // vertical start position
     ysteps = 2;
+    rad = 50;
     
     ofBackground(ofColor::black);  // black background
 }
@@ -21,18 +22,22 @@ void ofApp::update(){
     if (xpos > ofGetWidth()-50){
         xpos = ofGetWidth()-50;
         xsteps = -xsteps;
+        rad = ofRandom(5, 100);
         
     } else if (xpos < 50){
         xpos = 50;
         xsteps = -xsteps;
+        rad = ofRandom(5, 100);
         
     } else if (ypos > ofGetHeight()-50){
         ypos = ofGetHeight()-50;
         ysteps = -ysteps;
+        rad = ofRandom(5, 100);
         
     } else if (ypos < 50){
         ypos = 50;
         ysteps = -ysteps;
+        rad = ofRandom(5, 100);
         
     }
     
@@ -43,7 +48,7 @@ void ofApp::update(){
 void ofApp::draw(){
     
     ofSetColor(230, 123, 10);
-    ofDrawCircle(xpos, ypos, 50);
+    ofDrawCircle(xpos, ypos, rad);
     
     ofSetColor(20, 213, 10);
     string info = "position: " + ofToString(xpos,2);

@@ -11,5 +11,6 @@ class ofApp : public ofBaseApp{
 
     int xpos,xsteps;
     int ypos,ysteps;
+    int rad;
 		
 };
