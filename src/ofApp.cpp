@@ -19,26 +19,25 @@ void ofApp::update(){
     xpos = xpos + xsteps;
     ypos = ypos + ysteps;
     
-    if (xpos > ofGetWidth()-50){
-        xpos = ofGetWidth()-50;
+    if (xpos > ofGetWidth()-rad){
+        rad = ofRandom(5, 100);
+        xpos = ofGetWidth()-rad;
         xsteps = -xsteps;
-        rad = ofRandom(5, 100);
         
-    } else if (xpos < 50){
-        xpos = 50;
+    } else if (xpos < rad){
+        rad = ofRandom(5, 100);
+        xpos = rad;
         xsteps = -xsteps;
-        rad = ofRandom(5, 100);
         
-    } else if (ypos > ofGetHeight()-50){
-        ypos = ofGetHeight()-50;
+    } else if (ypos > ofGetHeight()-rad){
+        rad = ofRandom(5, 100);
+        ypos = ofGetHeight()-rad;
         ysteps = -ysteps;
-        rad = ofRandom(5, 100);
         
-    } else if (ypos < 50){
-        ypos = 50;
+    } else if (ypos < rad){
+        rad = ofRandom(5, 100);
+        ypos = rad;
         ysteps = -ysteps;
-        rad = ofRandom(5, 100);
-        
     }
     
     
